@@ -1,7 +1,6 @@
 import re
 import aiohttp
 import asyncio
-import getpass
 
 
 async def run(username, password):
@@ -53,5 +52,5 @@ async def run(username, password):
 
 if __name__ == '__main__':
     username = input('Username: ')
-    password = getpass.getpass('Password: ')
+    password = input('Password: ')
     asyncio.get_event_loop().run_until_complete(run(username, password))
